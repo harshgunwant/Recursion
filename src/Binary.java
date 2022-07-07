@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Binary {
     public static void main(String[] args){
-        int[] array={2,6,44,84,90,101};
-        int target=11;
+        int[] array={-1,0,3,5,9,12};
+        int target=0;
         System.out.println(Search(array, target, 0, array.length-1));
     }
     static int Search(int[] arr, int target, int s, int e){
@@ -21,7 +21,7 @@ public class Binary {
         else if (target>mid){
             return Search(arr,target,mid+1, e);
         }else{
-            return Search(arr,target,s,mid-1);
+            return Search(arr,target,s,mid);
         }
     }
 }
